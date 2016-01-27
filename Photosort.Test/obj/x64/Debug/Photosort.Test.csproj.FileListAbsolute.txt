@@ -1,0 +1,17 @@
+d:\ma198\Documents\Visual Studio 2015\Projects\Photosort\Photosort.Test\bin\x64\Debug\Photosort.Test.dll
+d:\ma198\Documents\Visual Studio 2015\Projects\Photosort\Photosort.Test\bin\x64\Debug\Photosort.Test.pdb
+d:\ma198\Documents\Visual Studio 2015\Projects\Photosort\Photosort.Test\bin\x64\Debug\Photosort.Test.pri
+d:\ma198\Documents\Visual Studio 2015\Projects\Photosort\Photosort.Test\obj\x64\Debug\Photosort.Test.csprojResolveAssemblyReference.cache
+d:\ma198\Documents\Visual Studio 2015\Projects\Photosort\Photosort.Test\obj\x64\Debug\Photosort.Test.dll
+d:\ma198\Documents\Visual Studio 2015\Projects\Photosort\Photosort.Test\obj\x64\Debug\Photosort.Test.pdb
+d:\ma198\Documents\Visual Studio 2015\Projects\Photosort\Photosort.Test\obj\x64\Debug\priconfig.xml
+d:\ma198\Documents\Visual Studio 2015\Projects\Photosort\Photosort.Test\obj\x64\Debug\priconfig.xml.intermediate
+d:\ma198\Documents\Visual Studio 2015\Projects\Photosort\Photosort.Test\obj\x64\Debug\layout.resfiles
+d:\ma198\Documents\Visual Studio 2015\Projects\Photosort\Photosort.Test\obj\x64\Debug\layout.resfiles.intermediate
+d:\ma198\Documents\Visual Studio 2015\Projects\Photosort\Photosort.Test\obj\x64\Debug\resources.resfiles
+d:\ma198\Documents\Visual Studio 2015\Projects\Photosort\Photosort.Test\obj\x64\Debug\resources.resfiles.intermediate
+d:\ma198\Documents\Visual Studio 2015\Projects\Photosort\Photosort.Test\obj\x64\Debug\pri.resfiles
+d:\ma198\Documents\Visual Studio 2015\Projects\Photosort\Photosort.Test\obj\x64\Debug\pri.resfiles.intermediate
+d:\ma198\Documents\Visual Studio 2015\Projects\Photosort\Photosort.Test\obj\x64\Debug\qualifiers.txt
+d:\ma198\Documents\Visual Studio 2015\Projects\Photosort\Photosort.Test\obj\x64\Debug\qualifiers.txt.intermediate
+d:\ma198\Documents\Visual Studio 2015\Projects\Photosort\Photosort.Test\obj\x64\Debug\MultipleQualifiersPerDimensionFound.txt

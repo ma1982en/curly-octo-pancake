@@ -1,0 +1,101 @@
+﻿<Page
+    x:Class="Photosort.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Photosort"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm="using:Photosort.ViewModel"
+    mc:Ignorable="d"
+    d:DataContext="{d:DesignInstance vm:MainViewModel}"    
+    >
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="10">
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition  />
+            <ColumnDefinition  />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+        <TextBlock x:Name="labelPhotoPath" Text="Path to photo source" VerticalAlignment="Center" />
+        <TextBox x:Name="textboxPhotopath" Text="{Binding Sourcepath}" PlaceholderText="Please enter path to source for photos" InputScope="Text" />
+        <Button x:Name="buttonSavePhotoPath" HorizontalAlignment="Stretch" Command="{Binding SavePhotoPathCommand}" Content="Save" />
+        
+        <Button x:Name="buttonAddFolder" HorizontalAlignment="Stretch" Command="{Binding AddTargetFolderCommand}" Content="Add Folder" />
+        <Button x:Name="ButtonRemoveFolder" HorizontalAlignment="Stretch" Command="{Binding RemoveTargetFolderCommand}" Content="Delete Folder" />
+
+        <ListBox Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="4" />
+
+        <Button Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="4" HorizontalAlignment="Stretch" Command="{Binding GoToNextPage}" Content="Verteile die Fotos" />
+
+
+        <!--Fenster modi umschalten-->
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="VisualStateGroup">
+                <!--Desktop-->
+                <VisualState x:Name="Desktop">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="800"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="labelPhotoPath.(Grid.Row)" Value="0" />
+                        <Setter Target="labelPhotoPath.(Grid.Column)" Value="0" />
+
+                        <Setter Target="textboxPhotopath.(Grid.Row)" Value="0" />
+                        <Setter Target="textboxPhotopath.(Grid.Column)" Value="1" />
+                        <Setter Target="textboxPhotopath.(Grid.ColumnSpan)" Value="2" />
+
+                        <Setter Target="buttonSavePhotoPath.(Grid.Row)" Value="0" />
+                        <Setter Target="buttonSavePhotoPath.(Grid.Column)" Value="3" />
+                        <Setter Target="buttonSavePhotoPath.(Grid.ColumnSpan)" Value="1" />
+
+                        <Setter Target="buttonAddFolder.(Grid.Row)" Value="1" />
+                        <Setter Target="buttonAddFolder.(Grid.Column)" Value="0" />
+                        <Setter Target="buttonAddFolder.(Grid.ColumnSpan)" Value="2" />
+
+                        <Setter Target="ButtonRemoveFolder.(Grid.Row)" Value="1" />
+                        <Setter Target="ButtonRemoveFolder.(Grid.Column)" Value="2" />
+                        <Setter Target="ButtonRemoveFolder.(Grid.ColumnSpan)" Value="2" />
+
+                    </VisualState.Setters>
+                </VisualState>
+
+                <!--Visualphone-->
+                <VisualState x:Name="VisualStatePhone">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="labelPhotoPath.(Grid.Row)" Value="0" />
+                        <Setter Target="labelPhotoPath.(Grid.Column)" Value="0" />
+
+                        <Setter Target="textboxPhotopath.(Grid.Row)" Value="1" />
+                        <Setter Target="textboxPhotopath.(Grid.Column)" Value="0" />
+                        <Setter Target="textboxPhotopath.(Grid.ColumnSpan)" Value="3" />
+
+                        <Setter Target="buttonSavePhotoPath.(Grid.Row)" Value="2" />
+                        <Setter Target="buttonSavePhotoPath.(Grid.Column)" Value="0" />
+                        <Setter Target="buttonSavePhotoPath.(Grid.ColumnSpan)" Value="3" />
+
+                        <Setter Target="buttonAddFolder.(Grid.Row)" Value="3" />
+                        <Setter Target="buttonAddFolder.(Grid.Column)" Value="0" />
+                        <Setter Target="buttonAddFolder.(Grid.ColumnSpan)" Value="2" />
+
+                        <Setter Target="ButtonRemoveFolder.(Grid.Row)" Value="3" />
+                        <Setter Target="ButtonRemoveFolder.(Grid.Column)" Value="2" />
+                        <Setter Target="ButtonRemoveFolder.(Grid.ColumnSpan)" Value="2" />
+
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+    </Grid>
+</Page>
