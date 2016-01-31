@@ -19,7 +19,7 @@ namespace Photosort.ViewModel
         public ICommand GoToNextPage { get; set; }
 
 
-        public string Sourcepath
+        public StorageFolder Sourcepath
         {
             get { return _sourcepath; }
             set { _sourcepath = value; SetProperty(ref _sourcepath, Sourcepath); }
@@ -44,16 +44,16 @@ namespace Photosort.ViewModel
             {
                 StorageApplicationPermissions.FutureAccessList.AddOrReplace("PickedFolderToken", folder);
             }
-
+            _sourcepath = folder;
         }
 
         private void OnGoToNextPage()
         {
             //Implement Navigationservice
-            ((Frame)Window.Current.Content).Navigate(typeof(ChoosingPage));
+            ((Frame)Window.Current.Content).Navigate(typeof(ChoosingPage),_sourcepath);
         }
 
-        string _sourcepath;
+        StorageFolder _sourcepath;
 
     }
 }

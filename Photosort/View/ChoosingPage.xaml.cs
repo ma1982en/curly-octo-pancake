@@ -1,5 +1,6 @@
 ﻿using Photosort.ViewModel;
 using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -11,9 +12,13 @@ namespace Photosort.View
     public sealed partial class ChoosingPage : Page
     {
         public ChoosingPage()
-        {
-            this.DataContext = new ChoosingViewModel();
+        {            
             this.InitializeComponent();
+        }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            this.DataContext = new ChoosingViewModel(e.Parameter);
         }
     }
 }
